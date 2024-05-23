@@ -4,7 +4,7 @@ import java.util.List;
 public class Banco {
 
     private String nome;
-    private final List<Conta> contas;
+    private static List<Conta> contas;
 
     public Banco(String nome) {
         this.nome = nome;
@@ -20,7 +20,11 @@ public class Banco {
     }
 
     public static void imprimirContas() {
-        contas.forEach();
+       if (!contas.isEmpty()) {
+           contas.forEach(System.out::println);
+       } else {
+           throw new RuntimeException("Lista vazia.");
+        }
     }
 
 

@@ -20,6 +20,11 @@ public class BancoTeste {
         Banco meuBanco = new Banco("LoserBank");
 
         //adiciona uma conta a esta lista:
+        meuBanco.addConta(c1);
+        meuBanco.addConta(c2);
+
+        System.out.println("\nLista de contas cadastrada no banco " + meuBanco.getNome() + ":");
+        Banco.imprimirContas();
 
 
 
